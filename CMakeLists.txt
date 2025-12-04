@@ -5,7 +5,11 @@ project(HWs LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(HWs main.cpp)
+add_executable(HWs main.cpp
+    hw1129.h hw1129.cpp
+    resources/1129Example.txt
+    resources/1129Result.txt
+)
 
 include(GNUInstallDirs)
 install(TARGETS HWs
