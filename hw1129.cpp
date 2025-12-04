@@ -75,3 +75,43 @@ int countWordInFile(const std::string &path, const std::string &word) {
 
     return count;
 }
+
+void replaceWordInFileLive(const std::string &inputPath, const std::string &outputPath, const std::string &target, const std::string &replacement) {
+    std::ifstream inFile(inputPath);
+    std::ofstream outFile(outputPath);
+
+    if (!inFile.is_open() || !outFile.is_open()) {
+        return;
+    }
+
+    std::string line;
+    while (std::getline(inFile, line)) {
+        std::string newLine;
+        size_t pos = 0;
+
+        while (pos < line.size()) {
+            bool match = true;
+
+            if (pos + target.size() <= line.size()) {
+                for (size_t j = 0; j < target.size(); ++j) {
+                    if (line[pos + j] != target[j]) {
+                        match = false;
+                        break;
+                    }
+                }
+            } else {
+                match = false;
+            }
+
+            if (match) {
+                newLine += replacement;
+                pos += target.size();
+            } else {
+                newLine += line[pos];
+                ++pos;
+            }
+        }
+
+        outFile << newLine << "\n";
+    }
+}

@@ -12,7 +12,9 @@ int main() {
 
     // std::cout << maxStrLen("resources/1129Example.txt") << std::endl;
 
-    std::cout << countWordInFile("resources/1129Example.txt", "99");
+    // std::cout << countWordInFile("resources/1129Example.txt", "99");
+
+    replaceWordInFileLive("resources/1129Example.txt", "resources/1129Result.txt", "99", "hello");
 
     return 0;
 }
