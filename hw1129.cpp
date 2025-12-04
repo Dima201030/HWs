@@ -1,5 +1,6 @@
 #include <string>
 #include <fstream>
+#include <iostream>
 
 #include "hw1129.h"
 
@@ -30,4 +31,23 @@ void deleteTheLastS(const std::string &pathEFile, const std::string &pathRFile) 
         getline(efile, line);
         rFile << line << '\n';
     }
+}
+
+int maxStrLen(const std::string &path) {
+    std::ifstream file(path);
+
+    if (!file) {
+        return -1;
+    }
+
+    std::string line;
+    int sizeLine = 0;
+
+    while (std::getline(file, line)) {
+        if (sizeLine < line.size()) {
+            sizeLine = line.size();
+        }
+    }
+
+    return sizeLine;
 }
