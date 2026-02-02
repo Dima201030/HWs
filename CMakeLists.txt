@@ -9,6 +9,8 @@ add_executable(HWs main.cpp
     hw1129.h hw1129.cpp
     resources/1129Example.txt
     resources/1129Result.txt
+    hw29012025.h hw29012025.cpp
+    hw05022026.h hw05022026.cpp
 )
 
 include(GNUInstallDirs)
