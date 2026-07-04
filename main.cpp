@@ -2,7 +2,9 @@
 
 // #include "hw1129.h"
 // #include "hw29012025.h"
-#include "hw05022026.h"
+#include "person.h"
+
+using namespace std;
 
 int main() {
 
@@ -28,7 +30,13 @@ int main() {
 
     // std::cout << c.getNumerator() << c.getDenominator();
 
+    Person humen("jjj;;;;", 1, 1, 1, "hh");
 
+    bool flags[2] = { true,false };
+
+    int values[2] = { 0,1 };
+
+    cout << flags[0] + values[0] + flags[1] + values[1];
 
     return 0;
 }
