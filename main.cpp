@@ -2,9 +2,9 @@
 
 // #include "hw1129.h"
 // #include "hw29012025.h"
-#include "person.h"
 
-using namespace std;
+#include "30032026/guide.h"
+
 
 int main() {
 
@@ -30,13 +30,18 @@ int main() {
 
     // std::cout << c.getNumerator() << c.getDenominator();
 
-    Person humen("jjj;;;;", 1, 1, 1, "hh");
+    // Person humen("jjj;;;;", 1, 1, 1, "hh");
 
-    bool flags[2] = { true,false };
+    // bool flags[2] = { true,false };
 
-    int values[2] = { 0,1 };
+    // int values[2] = { 0,1 };
 
-    cout << flags[0] + values[0] + flags[1] + values[1];
+    // cout << flags[0] + values[0] + flags[1] + values[1];
+
+    Guide l("/Users/dima/Developer/Projects/HWs/30032026/resources/1129Example.txt") ;
+
+    std::cout << l._persons[l._persons.size() - 1]._owner << std::endl;
+    std::cout << l.findC("BBC")._typeActivity << std::endl;
 
     return 0;
 }

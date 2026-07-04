@@ -20,13 +20,11 @@ add_executable(HWs
     05022026/hw05022026.h
     05022026/hw05022026.cpp
 
-    contacts/person.h
-    contacts/person.cpp
-    contacts/contacts.h
-    contacts/contacts.cpp
-
     30032026/person.h
     30032026/person.cpp
+    30032026/guide.h
+    30032026/guide.cpp
+    30032026/resources/1129Example.txt
 
 )
 
